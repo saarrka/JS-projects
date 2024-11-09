@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/to-do icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1 id="main-heading">YOURTODOLIST</h1>
+    <div class="line"></div>
+ 
+    <div class="container new-item">
+        <label for="item">Add new task: </label>
+        <span id="message"></span>
+        <input type="text" name="item" id="item-input">
+        <br>
+
+        <label for="date">Expiration date: </label>
+        <input type="date" name="date" id="date" min="date('Y-m-d');">
+
+        <button id="add-item">Add task</button>
+    </div>
+
+    <div class="container" id="item-list">
+        
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

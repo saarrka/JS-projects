@@ -1,0 +1,375 @@
+$primary-color: #000000;
+$secondary-color: #ffff;
+$special-color: rgb(255, 166, 0);
+$special-color2: rgb(215, 43, 20);
+$special-color3: beige;
+
+$font: Helvetica, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font; 
+    font-size: 20px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/To-Do\ List\ Notepad.png'); /* Put your image path here */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust this for transparency */
+    z-index: -1; /* Make sure it's behind the content */
+}
+
+#main-heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    transition: all 4s ease;  
+}
+
+.separated {
+    letter-spacing: 0.5em;  
+    transition: all 4s ease; 
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: $special-color2;
+    margin-top: 5px;
+}
+
+.row {
+    width: 100%;
+}
+
+label {
+    text-align: center;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.new-item {
+    width: 30%;
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    color: $secondary-color;
+    background-color: $special-color2;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    > * {
+        margin: 5px 0;
+        border-radius: 5px; 
+    }
+}
+
+#add-item {
+    color: $primary-color;
+    background-color: $secondary-color;
+    padding: 10px; 
+    border: none;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    align-self: flex-end;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        color: $special-color2; 
+    }
+}
+
+#item-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+}
+
+#item-list .item {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    overflow-wrap: break-word;
+    background-color: $secondary-color;
+    padding: 10px 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(188, 24, 24, 0.1);
+
+    > * {
+        margin: 0 5px;
+    }
+}
+
+.check {
+    width: 18px;                 
+    height: 18px;                
+    cursor: pointer;
+    margin-right: 10px;    
+}
+
+.date-img {
+    width: 25px;
+}
+
+.info { 
+    justify-content: right;
+}
+
+.info button {
+    background-color: $special-color2;
+    color: $secondary-color;
+    padding: 5px 10px; 
+    border-radius: 3px;
+    border: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $primary-color; 
+        color: $secondary-color; 
+    }
+}
+
+.text {
+    margin-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    > * {
+        background-color: $primary-color;
+        color: $secondary-color;
+        border-radius: 3px;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: $special-color2;
+            color: $special-color3;
+            border: none;
+        }
+    }
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.edit-input, .ok, .cancel {
+    margin: 0 10px;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.ok, .cancel {
+    background-color: $primary-color;
+    color: $secondary-color;
+
+    &:hover {
+        background-color: $special-color2;
+        color: $special-color3;
+        border: none;
+    }
+}
+
+.done:hover, .delete:hover, .edit:hover {
+    cursor: pointer;
+}
+
+/* Osnovni stilovi menija */
+.menu {
+    background-color: #F8F9FA; /* Boja pozadine menija */
+    padding: 10px 0; /* Razmak unutar menija */
+    border-radius: 5px; /* Zaobljeni uglovi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Senka menija */
+}
+
+.menu-list {
+    display: flex; /* Raspoređivanje stavki u redu */
+    align-items: center;
+    justify-content: space-around; /* Razmak između stavki */
+    list-style: none; /* Uklanjanje oznaka lista */
+    margin: 0; /* Uklanjanje margina */
+    padding: 0; /* Uklanjanje padding-a */
+}
+
+.menu-item {
+    position: relative; /* Potrebno za pseudo-elemente */
+    flex-grow: 1; /* Da bi se stavke širile ravnomerno */
+    margin: 0 10px; /* Razmak između stavki */
+}
+
+.menu-item a {
+    display: block; /* Da bi ceo red bio kliktabilan */
+    text-align: center;
+    text-decoration: none; /* Uklanjanje podvlačenja linkova */
+    padding: 10px 15px; /* Razmak unutar stavki menija */
+    border-radius: 5px; /* Zaobljeni uglovi */
+    transition: background-color 0.3s; /* Efekat promene boje */
+    color: $primary-color;
+}
+
+/* Stil za li element */
+.menu-item:hover a {
+    background-color: $primary-color; /* Promena boje pozadine na hover */
+    color: $secondary-color; /* Promena boje teksta na hover */
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    margin: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) { /* Tablet and smaller */
+    .new-item {
+        width: 50%; /* Širina za tablete */
+    }
+    #item-list {
+        margin: 0 50px; /* Manji razmak */
+    }
+
+    #add-item {
+        width: 100%; /* Širina dugmeta na tabletima */
+        margin-top: 15px; /* Manji razmak */
+    }
+
+    .menu {
+        padding: 15px 0; /* Veći padding za tablet */
+    }
+
+    .menu-list {
+        justify-content: space-between; /* Raspored stavki u redu */
+    }
+
+    .menu-item {
+        padding: 12px 10px; /* Manji padding za stavke */
+    }
+}
+
+@media (max-width: 768px) { /* Phones */
+    #main-heading {
+        font-size: 30px; /* Manja veličina fonta za naslove */
+    }
+    .new-item {
+        width: 90%; /* Širina za telefone */
+    }
+    #item-list {
+        margin: 0 20px; /* Manji razmak */
+    }
+    
+    #add-item {
+        width: 100%; /* Dugme zauzima celu širinu */
+        margin-top: 10px; /* Manji razmak */
+        padding: 12px; /* Povećan padding za bolje klikabilnost */
+    }
+
+    #item-list .item {
+        padding: 10px 5px; /* Manji padding za stavke */
+        font-size: 18px; /* Manja veličina fonta za stavke */
+    }
+
+    .button-container {
+        gap: 10px;
+        flex-direction: column; /* Promenjen raspored dugmadi */
+        width: 100%; /* Dugmadi zauzimaju celu širinu */
+    }
+
+    .delete, .edit, .done {
+        width: 80%;
+    }
+
+    .ok, .cancel {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 8px 12px; /* Povećan padding za bolje klikabilnost */
+        width: 100%; /* Dugmici zauzimaju celu širinu */
+    }
+
+    .menu {
+        flex-direction: column; /* Meniji u koloni na manjim ekranima */
+    }
+
+    .menu-list {
+        flex-direction: column; /* Stavke u koloni */
+        align-items: center; /* Poravnanje stavki na sredinu */
+    }
+
+    .menu-item {
+        margin: 5px 0; /* Razmak između stavki u koloni */
+        padding: 10px 20px; /* Veći padding za lakše dodirivanje */
+        width: 90%; /* Širina linkova */
+        text-align: center; /* Centriranje teksta */
+    }
+}
+
+@media (max-width: 500px) { /* Dodatni stilovi za mobilne uređaje ispod 500px */
+    #main-heading {
+        font-size: 25px; /* Još manja veličina fonta */
+    }
+
+    .new-item {
+        padding: 20px 15px; /* Manji padding */
+        margin: 30px 10px; /* Manji razmak */
+    }
+
+    #add-item {
+        padding: 10px; /* Manji padding za dugme */
+        font-size: 16px; /* Manja veličina fonta */
+    }
+
+    #item-list .item {
+        flex-direction: column; /* Raspored stavki kao kolone */
+        gap: 20px;
+        font-size: 16px; /* Još manja veličina fonta za stavke */
+        padding: 8px 5px; /* Manji padding */
+        width: 100%; /* Stavke zauzimaju celu širinu */
+    }
+
+    .button-container {
+        gap: 10px;
+        flex-direction: column; /* Dugmad će se rasporediti u kolonu */
+        width: 100%; /* Dugmadi zauzimaju celu širinu */
+    }
+
+
+    .ok, .cancel {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 8px; /* Manji padding za dugmice */
+        width: 100%; /* Dugmici zauzimaju celu širinu */
+    }
+
+    .edit-input {
+        width: 100%; /* Input zauzima celu širinu */
+        padding: 10px; /* Povećan padding za input */
+        font-size: 16px; /* Manja veličina fonta za input */
+    }
+
+    .menu {
+        padding: 10px 0; /* Manji padding za mobilne uređaje */
+    }
+
+    .menu-item {
+        font-size: 16px; /* Manja veličina fonta za linkove */
+    }
+}
