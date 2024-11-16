@@ -1,0 +1,261 @@
+/* Global styles */
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height */
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(6, 172, 125));
+    border-radius: 10px;
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Rest of your existing styles follow... */
+
+  
+  /* Input and button styling */
+  .weather-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .city-input {
+    width: 75%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    width: 20%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #3e64ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #2c4ec4;
+  }
+  
+  /* Weather Result styling */
+  .weather-result {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .weather-result h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .weather-result img {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+  }
+  
+  .weather-result p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center; /* Center text */
+    color: #333;
+  }
+  
+  .weather-result i {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  /* City and Icon container */
+  .city-and-icon {
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .city-and-icon h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .city-and-icon img {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px; /* Space between city name and icon */
+  }
+  
+  .weather-info {
+    text-align: left;
+  }
+  
+  /* Responsiveness for different devices */
+  
+  /* 1. For mobile devices (less than 600px) */
+  @media (max-width: 599px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .weather-input {
+      flex-direction: column;
+    }
+  
+    .city-input, .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .weather-result img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .weather-result p {
+      font-size: 1rem;
+    }
+  
+    .city-and-icon {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .city-and-icon img {
+      margin-top: 10px;
+    }
+  }
+  
+  /* 2. For tablets (600px to 899px) */
+  @media (min-width: 600px) and (max-width: 899px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .weather-input {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .city-input {
+      width: 70%;
+    }
+  
+    .btn {
+      width: 28%;
+    }
+  
+    .weather-result img {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .weather-result p {
+      font-size: 1.1rem;
+    }
+  
+    .city-and-icon {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .city-and-icon img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  
+  /* 3. For desktop devices (900px and above) */
+  @media (min-width: 900px) {
+    .container {
+      max-width: 800px;
+      padding: 30px;
+    }
+  
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .weather-input {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .city-input {
+      width: 75%;
+    }
+  
+    .btn {
+      width: 22%;
+    }
+  
+    .weather-result img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .weather-result p {
+      font-size: 1.2rem;
+    }
+  
+    .city-and-icon {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .city-and-icon img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .weather-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+  }
+  
