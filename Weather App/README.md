@@ -19,3 +19,26 @@ This is a simple Weather App built using JavaScript, HTML, and CSS. The app allo
 2. The app sends a request to the OpenWeatherMap API with the city name.
 3. The weather data is then displayed on the screen, showing the temperature, humidity, and weather description.
 4. If the city is invalid or the request fails, an error message is shown.
+
+## Weather App - API Key Setup
+
+For the Weather App project, you need an API key from [OpenWeather](https://openweathermap.org/).
+
+### Follow these steps to get your API key:
+
+1. Go to [OpenWeather API](https://openweathermap.org/).
+2. Sign up or log in to your account.
+3. Once logged in, navigate to the **API keys** section in your account settings.
+4. Copy the generated API key.
+
+### Replace the API Key in `app.js`
+
+After obtaining your API key, follow these steps:
+
+1. Open the `app.js` file in the **Weather App** folder.
+2. Replace `YOUR_API_KEY` with the API key you copied from OpenWeather.
+
+For example, change:
+
+```javascript
+const apiKey = 'YOUR_API_KEY';  // Replace with your actual API key
